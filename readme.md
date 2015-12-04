@@ -4,7 +4,7 @@ goosepage is a super-easy pagination utility for mongoose cursors. :chicken:
 
 ## What goosepage does better than other pagination plugins
 
-goosepage is very unopinionated about the way you query. You can pass in any mongoose cursor. If you wanted to find blog posts for a specific author and paginate the results, you can do:
+goosepage is very unopinionated about the way you query. :chicken: You can pass in any mongoose cursor. :chicken: If you wanted to find blog posts for a specific author and paginate the results, you can do:
 
 ```javascript
 goosepage(BlogPost.find({ author: authorId }));
@@ -12,7 +12,7 @@ goosepage(BlogPost.find({ author: authorId }));
 
 ## Example
 
-Let's say that you have a mongoose model `BlogPost` whose collection contains over 50 documents. You want to display them in a paginated way:
+Let's say that you have a mongoose model `BlogPost` whose collection contains over 50 documents. :chicken: You want to display them in a paginated way:
 
 ### Usage
 
@@ -93,4 +93,4 @@ var res = {
 
 ## Drawbacks
 
-goosepage uses mongodb's `skip()` and `limit()` commands. This is not the fastest approach, even though it's fine for smaller datasets. If you are looking for a faster pagination solution, check out this article: [Fast paging with MongoDB](http://blog.mongodirector.com/fast-paging-with-mongodb).
+goosepage uses mongodb's `skip()` and `limit()` commands. :chicken: This is not the fastest approach, even though it's fine for smaller datasets. :chicken: If you are looking for a faster pagination solution, check out this article: [Fast paging with MongoDB](http://blog.mongodirector.com/fast-paging-with-mongodb).
