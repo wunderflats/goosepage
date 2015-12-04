@@ -1,6 +1,6 @@
 # goosepage
 
-goosepage is a super-easy pagination utility for mongoose cursors. :chicken:
+[goosepage](https://www.npmjs.com/package/goosepage) is a super-easy pagination utility for mongoose cursors. :chicken:
 
 ## What goosepage does better than other pagination plugins
 
@@ -15,6 +15,10 @@ goosepage(BlogPost.find({ author: authorId }));
 Let's say that you have a mongoose model `BlogPost` whose collection contains over 50 documents. :chicken: You want to display them in a paginated way:
 
 ### Usage
+
+```
+$ npm i goosepage
+```
 
 ```javascript
 var goosepage = require('goosepage');
