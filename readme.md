@@ -20,7 +20,7 @@ Let's say that you have a mongoose model `BlogPost` whose collection contains ov
 var goosepage = require('goosepage');
 
 goosepage(BlogPost.find())
-  .then((res) => console.log(res));
+  .then((results) => console.log(results));
 ```
 
 ### Result
@@ -28,7 +28,7 @@ goosepage(BlogPost.find())
 By default, this will query the **first 20 items** from **page 0**:
 
 ```javascript
-var res = {
+var results = {
   // there are 52 documents in total for the query
   total: 52,
   // we are on page 0
@@ -57,13 +57,13 @@ If you want to query the second page, simply do:
 
 ```javascript
 goosepage(BlogPost.find(), { page: 1 })
-  .then((res) => console.log(res));
+  .then((results) => console.log(results));
 ```
 
 This will get you the next 20 items:
 
 ```javascript
-var res = {
+var results = {
   total: 52,
   page: 1, // this changed
   itemsPerPage: 20,
@@ -77,13 +77,13 @@ For more or fewer items per page, you can always use `opts.itemsPerPage`:
 
 ```javascript
 goosepage(BlogPost.find(), { itemsPerPage: 30 })
-  .then((res) => console.log(res));
+  .then((results) => console.log(results));
 ```
 
 This will get you the next 20 items:
 
 ```javascript
-var res = {
+var results = {
   total: 52,
   page: 0,
   itemsPerPage: 30, // this changed
