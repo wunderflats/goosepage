@@ -1,7 +1,8 @@
 'use strict';
 
 var goosepage = (cursor, opts) => {
-  opts = Object.assign(goosepage.defaults, opts);
+  var defaults = { itemsPerPage: 20, page: 0};
+  opts = Object.assign(defaults, goosepage.defaults, opts);
 
   var query = cursor._conditions;
   var Model = cursor.model;
